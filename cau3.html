@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const nguyenam = ["a", "e", "i", "o", "u"];
+    let a = prompt("Nhập chuỗi: ");
+
+    function kiemtra(text) {
+        let count = 0;
+
+        for (let letter of text.toLowerCase()) {
+            if (nguyenam.includes(letter)) {
+                count++;
+            }
+        }
+        if (count === 0) {
+            return false;
+        }
+        else {
+            return count;
+        }
+    }
+
+    if (kiemtra(a) === false) {
+        document.write("Trong chuỗi không có ký tự nguyên âm.");
+    }
+    else {
+        document.write("Ký tự nguyên âm: " + kiemtra(a));
+    }
+</script>
+</body>
+</html>
